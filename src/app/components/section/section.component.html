@@ -1,0 +1,12 @@
+<section class="app-section">
+    <p *ngIf="true">Titile</p>
+    <div [ngSwitch]="'Angular'">
+        <p *ngSwitchCase="'Angular'">Angular Course</p>
+        <p *ngSwitchCase="'TypeScript'">TypeScript Course</p>
+        <p *ngSwitchCase="'JavaScript'">JavaScript Course</p>
+        <p *ngSwitchDefault>HTML Course</p>
+    </div>
+    <div class="container">
+        <p *ngFor="let item of ['one', 'two', 'second']; let i = index">{{(i + 1) + item}}</p>
+    </div>
+</section>
