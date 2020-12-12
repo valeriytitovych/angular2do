@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SectionComponent } from './components/section/section.component';
 import { TodosComponent } from './pages/todos/todos.component';
+import { TodoItemComponent } from './pages/todos/todo-item/todo-item.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { TodosComponent } from './pages/todos/todos.component';
     FooterComponent,
     SectionComponent,
     TodosComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,
