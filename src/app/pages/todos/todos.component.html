@@ -3,34 +3,9 @@
         <p>Todo list is empty. Please create your first todo.</p>
     </div>
     <ul class="list-group list-group-flush todos-list" *ngIf="todoList">
-        <!-- <app-todo-item *ngFor="let item of todoList">
-            [item]="todo"
-        </app-todo-item> -->
-        <li class="list-group-item todos-item" *ngFor="let item of todoList">
-            <header class="container">
-                <div class="row todo-header">
-                    <div class="d-flex col-sm-6 col-12 app-todo-header-list-item">
-                        <i class="material-icons check-box">
-                            {{ item.isDone ? 'check_box' : 'check_box_outline_blank' }}
-                        </i>
+        <app-todo-item [todo]="todoList">
 
-                        <h5 [class.is-completed]="item.isDone">
-                            {{item.title}}
-                        </h5>
-                    </div>
-
-                    <div class="todo-btn-group col-sm-6 col-12 d-flex justify-content-sm-end app-todo-header-btn">
-                        <button class="btn btn-primary" [disabled]="!item.description">show/hide details</button>
-
-                        <button class="btn btn-danger">del</button>
-                    </div>
-                </div>
-            </header>
-
-            <div class="todo-description d-flex justify-content-center">
-                {{item.description}}
-            </div>
-        </li>
+        </app-todo-item>
     </ul>
 
     <div class="text-center" *ngIf="!todoList">
