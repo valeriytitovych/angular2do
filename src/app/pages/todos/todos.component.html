@@ -1,4 +1,6 @@
-<div class="app-todos">
+<div class="container app-todos">
+    <app-new-todo></app-new-todo>
+
     <div class="text-center" *ngIf="todoList && !todoList.length">
         <p>Todo list is empty. Please create your first todo.</p>
     </div>
