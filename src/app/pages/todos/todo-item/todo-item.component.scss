@@ -1,0 +1,27 @@
+.is-done {
+    text-decoration: line-through;
+}
+
+.is-completed {
+    text-decoration: line-through;
+}
+
+.check-box {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.todo-btn-group button:not(:last-child) {
+  margin-right: 5px;
+}
+
+.todo-description {
+  padding: 10px 0px;
+}
+
+@media (max-width: 575.98px) {
+  .app-todo-header-list-item,
+  .app-todo-header-btn {
+    justify-content: center;
+  }
+}

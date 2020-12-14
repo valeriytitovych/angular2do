@@ -1,9 +1,9 @@
 <div class="app-todos">
-    <div class="text-center" *ngIf="todoList?.length === 0">
+    <div class="text-center" *ngIf="todoList && !todoList.length">
         <p>Todo list is empty. Please create your first todo.</p>
     </div>
     <ul class="list-group list-group-flush todos-list" *ngIf="todoList">
-        <app-todo-item [todo]="todoList">
+        <app-todo-item *ngFor="let todo of todoList" [todo]="todo">
 
         </app-todo-item>
     </ul>

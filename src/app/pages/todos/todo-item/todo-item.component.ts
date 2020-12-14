@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { Todo } from 'src/app/core/interfaces';
 
 @Component({
   selector: 'app-todo-item',
@@ -7,11 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./todo-item.component.scss']
 })
 export class TodoItemComponent implements OnInit {
-  @Input() todo: [];
+  @Input() todo: Todo;
+
+  isDescriptionShown = false;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
 
+  toggleDescription(): void {
+    this.isDescriptionShown = !this.isDescriptionShown;
   }
-
 }
