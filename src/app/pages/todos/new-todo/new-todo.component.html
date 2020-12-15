@@ -14,7 +14,7 @@
         <p>Todo title must be at least 4 characters long.</p>
     </div>
 
-    <div *ngIf="newTodoTitle.touched && newTodoForm.invalid">
+    <div *ngIf="(newTodoTitle.touched && newTodoForm.invalid) || (newTodoForm.invalid && isSubmit)">
         <p>Enter please Todo title</p>
     </div>
 
