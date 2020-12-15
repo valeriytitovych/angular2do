@@ -32,4 +32,16 @@ export class NewTodoComponent implements OnInit {
 
     this.newTodoForm.reset();
   }
+
+  keyPressAlphaNumeric(event: { keyCode: number; preventDefault: () => void; }) {
+
+    let inp = String.fromCharCode(event.keyCode);
+
+    if (/[a-zA-Z0-9]/.test(inp)) {
+      return true;
+    } else {
+      event.preventDefault();
+      return false;
+    }
+  }
 }
