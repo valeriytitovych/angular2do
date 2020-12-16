@@ -39,6 +39,7 @@ export class NewTodoComponent implements OnInit {
 
     if (/[a-zA-Z0-9]/.test(todoTitleValidation)) {
       return true;
+
     } else {
       event.preventDefault();
       return false;
