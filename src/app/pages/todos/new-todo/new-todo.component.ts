@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-new-todo',
@@ -7,15 +7,17 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./new-todo.component.scss']
 })
 export class NewTodoComponent implements OnInit {
-  @ViewChild('newTodoForm') newTodoForm: FormGroup;
-
-  title: string;
-  description: string;
+  newTodoForm: FormGroup;
   isSubmit = false;
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.createNewTodoForm();
+  }
+
+  get titleControl() {
+    return this.newTodoForm.get('title') as FormControl;
   }
 
   onSubmit(): void {
@@ -33,16 +35,16 @@ export class NewTodoComponent implements OnInit {
     this.newTodoForm.reset();
   }
 
-  keyPressAlphaNumeric(event) {
-
-    var todoTitleValidation = String.fromCharCode(event.keyCode);
-
-    if (/[a-zA-Z0-9]/.test(todoTitleValidation)) {
-      return true;
-
-    } else {
-      event.preventDefault();
-      return false;
-    }
+  private createNewTodoForm(): void {
+    this.newTodoForm = this.fb.group({
+      title: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength
+        ]
+      ],
+      description: []
+    });
   }
 }
