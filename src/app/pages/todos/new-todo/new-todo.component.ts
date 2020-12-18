@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { TodoService } from 'src/app/core/services/todo/todo.service';
 
 @Component({
   selector: 'app-new-todo',
@@ -10,7 +11,7 @@ export class NewTodoComponent implements OnInit {
   newTodoForm: FormGroup;
   isSubmit = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private todoService: TodoService) { }
 
   ngOnInit(): void {
     this.createNewTodoForm();
@@ -28,10 +29,8 @@ export class NewTodoComponent implements OnInit {
     }
 
     this.isSubmit = false;
-    console.log(
-      this.newTodoForm.value
-    );
-
+    this.setDefaultValues();
+    this.todoService.addTodo(this.newTodoForm.value);
     this.newTodoForm.reset();
   }
 
@@ -44,7 +43,17 @@ export class NewTodoComponent implements OnInit {
           Validators.minLength
         ]
       ],
-      description: []
+      description: [],
+      isDone: [false]
     });
   }
+
+  private setDefaultValues(): void {
+    this.newTodoForm.value.isDone = false;
+  }
+
+  // private resetTodoForm(): void {
+  //   this.newTodoForm.get('title').reset();
+  //   this.newTodoForm.get('description').reset();
+  // }
 }

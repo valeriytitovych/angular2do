@@ -10,6 +10,7 @@ import { SectionComponent } from './components/section/section.component';
 import { TodosComponent } from './pages/todos/todos.component';
 import { TodoItemComponent } from './pages/todos/todo-item/todo-item.component';
 import { NewTodoComponent } from './pages/todos/new-todo/new-todo.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NewTodoComponent } from './pages/todos/new-todo/new-todo.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { promise } from 'protractor';
 import { Todo } from 'src/app/core/interfaces';
 import { TodoService } from 'src/app/core/services/todo/todo.service';
 
@@ -13,9 +14,12 @@ export class TodosComponent implements OnInit {
   constructor(private todoService: TodoService) { }
 
   ngOnInit(): void {
-    this.todoService.getTodoData()
-      .subscribe((data: Array<Todo>) => {
-        this.todoList = data;
-      });
+    this.getTodoData();
+  }
+
+  private async getTodoData(): Promise<void> {
+    this.todoService.todoData.subscribe(data => {
+      this.todoList = data;
+    });
   }
 }

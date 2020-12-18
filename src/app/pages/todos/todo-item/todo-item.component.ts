@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, } from '@angular/core';
 import { Todo } from 'src/app/core/interfaces';
+import { TodoService } from 'src/app/core/services/todo/todo.service';
 
 @Component({
   selector: 'app-todo-item',
@@ -11,11 +12,15 @@ export class TodoItemComponent implements OnInit {
 
   isDescriptionShown = false;
 
-  constructor() { }
+  constructor(private todoService: TodoService) { }
 
   ngOnInit(): void { }
 
   toggleDescription(): void {
     this.isDescriptionShown = !this.isDescriptionShown;
+  }
+
+  delTodo(todoId: number): void {
+    this.todoService.delTodo(todoId);
   }
 }

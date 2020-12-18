@@ -1,0 +1,30 @@
+{
+  "todos": [
+    {
+      "title": "Learn JS",
+      "description": null,
+      "isDone": false,
+      "id": 1
+    },
+    {
+      "title": "Learn Angular CLI",
+      "description": "Important but difficult",
+      "isDone": false,
+      "id": 2
+    }
+  ],
+  "test": [
+    {
+      "id": 1,
+      "title": "Learn JS",
+      "description": "",
+      "isDone": true
+    },
+    {
+      "id": 2,
+      "title": "Learn Angular",
+      "description": "Test description test",
+      "isDone": false
+    }
+  ]
+}
