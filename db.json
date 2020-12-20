@@ -3,28 +3,50 @@
     {
       "title": "Learn JS",
       "description": null,
-      "isDone": false,
+      "isDone": true,
       "id": 1
     },
     {
-      "title": "Learn Angular CLI",
-      "description": "Important but difficult",
+      "title": "AngularJS",
+      "description": null,
       "isDone": false,
-      "id": 2
+      "id": 3
+    },
+    {
+      "title": "AngularCLI",
+      "description": null,
+      "isDone": true,
+      "id": 4
     }
   ],
-  "test": [
+  "users": [
     {
       "id": 1,
-      "title": "Learn JS",
-      "description": "",
-      "isDone": true
+      "name": "Arnold Reid",
+      "email": "arnold.reid@example.com",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptas deserunt quae ratione corporis quas ducimus perferendis aliquid, nobis aspernatur libero totam a explicabo dolor quod.",
+      "photo": "https://randomuser.me/api/portraits/men/30.jpg"
     },
     {
       "id": 2,
-      "title": "Learn Angular",
-      "description": "Test description test",
-      "isDone": false
+      "name": "Elmer Gibson",
+      "email": "elmer.gibson@example.com",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptas deserunt quae ratione corporis quas ducimus perferendis aliquid, nobis aspernatur libero totam a explicabo dolor quod.",
+      "photo": "https://randomuser.me/api/portraits/men/2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Marion Patterson",
+      "email": "marion.patterson@example.com",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptas deserunt quae ratione corporis quas ducimus perferendis aliquid, nobis aspernatur libero totam a explicabo dolor quod.",
+      "photo": "https://randomuser.me/api/portraits/women/68.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Arlene Bradley",
+      "email": "arlene.bradley@example.com",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptas deserunt quae ratione corporis quas ducimus perferendis aliquid, nobis aspernatur libero totam a explicabo dolor quod.",
+      "photo": "https://randomuser.me/api/portraits/women/12.jpg"
     }
   ]
 }

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Todo } from '../../interfaces';
 
@@ -8,9 +8,9 @@ import { Todo } from '../../interfaces';
   providedIn: 'root'
 })
 export class TodoService {
-  todoData = new Subject<Array<Todo>>();
+  todoData = new BehaviorSubject<Array<Todo>>(null);
 
-  private url = environment.url + '/todos';
+  private url = environment.url + 'todos';
 
   constructor(private http: HttpClient) {
     this.getTodoData();
@@ -30,7 +30,7 @@ export class TodoService {
     this.http.post(this.url, newTodo).subscribe(() => this.getTodoData());
   }
 
-  updaeTodo(): void {
-
+  updateTodo(todoId: number, newTodo: Todo): void {
+    this.http.put(`${this.url}/${todoId}`, newTodo).subscribe(() => this.getTodoData());
   }
 }
