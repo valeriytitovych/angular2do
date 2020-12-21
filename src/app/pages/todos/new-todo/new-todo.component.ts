@@ -44,16 +44,13 @@ export class NewTodoComponent implements OnInit {
         ]
       ],
       description: [],
-      isDone: [false]
+      isDone: [false],
+      priority: ['low']
     });
   }
 
   private setDefaultValues(): void {
     this.newTodoForm.value.isDone = false;
+    this.newTodoForm.controls["priority"].setValue('low');
   }
-
-  // private resetTodoForm(): void {
-  //   this.newTodoForm.get('title').reset();
-  //   this.newTodoForm.get('description').reset();
-  // }
 }

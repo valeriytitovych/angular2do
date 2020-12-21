@@ -32,6 +32,21 @@
             formControlName="description"></textarea>
     </div>
 
+    <div>
+        <label>
+            <input type="radio" value="low" formControlName="priority" checked>
+            <span>low</span>
+        </label>
+        <label>
+            <input type="radio" value="medium" formControlName="priority">
+            <span>medium</span>
+        </label>
+        <label>
+            <input type="radio" value="high" formControlName="priority">
+            <span>high</span>
+        </label>
+    </div>
+
     <footer>
         <!-- [disabled]="newTodoForm.invalid" -->
         <button class="btn btn-primary" type="submit">

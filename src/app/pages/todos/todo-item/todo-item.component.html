@@ -9,6 +9,7 @@
                 <h5 [class.is-completed]="todo.isDone">
                     {{todo.title | uppercase}}
                 </h5>
+                <span class="badge badge-pill">{{todo.priority}}</span>
             </div>
 
             <div class="todo-btn-group col-sm-6 col-12 d-flex justify-content-sm-end app-todo-header-btn">
