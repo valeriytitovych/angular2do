@@ -9,15 +9,20 @@
                 <h5 [class.is-completed]="todo.isDone">
                     {{todo.title | uppercase}}
                 </h5>
-                <span class="badge badge-pill">{{todo.priority}}</span>
+                <span class="badge badge-pill" [ngClass]="{}">{{todo.priority}}</span>
             </div>
 
             <div class="todo-btn-group col-sm-6 col-12 d-flex justify-content-sm-end app-todo-header-btn">
-                <button class="btn btn-primary" [disabled]="!todo.description" (click)="toggleDescription()">
+                <button class="btn btn-secondary" type="button" [disabled]="!todo.description"
+                    (click)="toggleDescription()">
                     {{ isDescriptionShown ? 'Hide details' : 'Show details' | lowercase}}
                 </button>
 
-                <button class="btn btn-danger" (click)="delTodo(todo.id)">{{'del' | uppercase}}</button>
+                <button class="btn btn-primary" type="button" (click)="editTodo()">
+                    Edit
+                </button>
+
+                <button class="btn btn-danger" type="button" (click)="delTodo(todo.id)">{{'del' | uppercase}}</button>
             </div>
         </div>
     </header>

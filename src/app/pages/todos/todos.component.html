@@ -1,5 +1,6 @@
 <div class="container app-todos">
-    <app-new-todo></app-new-todo>
+    <!-- <app-new-todo></app-new-todo> -->
+    <button type="button" class="btn btn-primary" (click)="createNewTodo()">Create new Todo</button>
 
     <form>
         <div class="form-group">
@@ -12,7 +13,7 @@
         <p>Todo list is empty. Please create your first todo.</p>
     </div>
     <ul class="list-group list-group-flush todos-list" *ngIf="todoList">
-        <app-todo-item *ngFor="let todo of todoList | filterTodo:search" [todo]="todo">
+        <app-todo-item *ngFor="let todo of todoList | filterTodo:search" [todo]="todo" (isEdit)="editTodo($event)">
 
         </app-todo-item>
     </ul>
