@@ -1,53 +1,29 @@
 {
   "todos": [
     {
-      "title": "learn html",
-      "description": null,
-      "isDone": true,
-      "priority": "medium",
-      "id": 1
-    },
-    {
-      "title": "learn scc",
-      "description": "html should look better with CSS",
-      "isDone": true,
-      "priority": "high",
-      "id": 2
-    },
-    {
-      "title": "learn css preproc",
-      "description": "SASS is more comfortable",
-      "isDone": true,
-      "priority": "medium",
-      "id": 3
-    },
-    {
       "title": "Learn JS",
       "description": null,
       "isDone": true,
-      "priority": "high",
-      "id": 4
+      "id": 1
     },
     {
-      "title": "learn angular",
+      "title": "AngularJS",
       "description": null,
       "isDone": false,
-      "priority": "high",
-      "id": 5
+      "id": 3
     },
     {
       "title": "AngularCLI",
-      "description": "priority 'low' here just to be shure this one works as well",
-      "isDone": false,
-      "priority": "low",
-      "id": 6
+      "description": null,
+      "isDone": true,
+      "id": 4
     },
     {
-      "title": "learn bootstrap",
-      "description": "we can work without it, but bootstrap helps us alot if we want to make our pages responsive without tons of media qeries",
-      "isDone": true,
+      "title": "gjyj",
+      "description": "fgrgrgr",
+      "isDone": false,
       "priority": "low",
-      "id": 7
+      "id": 5
     }
   ],
   "users": [

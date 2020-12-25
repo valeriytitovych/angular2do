@@ -19,6 +19,8 @@ import { AboutProjectComponent } from './pages/about/about-project/about-project
 import { AboutUsComponent } from './pages/about/about-us/about-us.component';
 import { UserComponent } from './pages/about/user/user.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { ComponentsComponent } from './shared/components/components.component';
+import { FilterTodoByPriorityPipe } from './shared/pipes/filter-todo-by-priority/filter-todo-by-priority.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     NavbarComponent,
     AboutProjectComponent,
     AboutUsComponent,
-    UserComponent
+    UserComponent,
+    ComponentsComponent,
+    FilterTodoByPriorityPipe
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,10 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     HttpClientModule,
     ModalModule.forRoot()
   ],
-  entryComponents: [NewTodoComponent],
+  entryComponents: [
+    NewTodoComponent,
+    ComponentsComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

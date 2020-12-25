@@ -9,7 +9,9 @@
                 <h5 [class.is-completed]="todo.isDone">
                     {{todo.title | uppercase}}
                 </h5>
-                <span class="badge badge-pill" [ngClass]="{}">{{todo.priority}}</span>
+                <span class="badge badge-pill d-flex justify-content-center align-items-center badge-item"
+                    [class.badge-success]="todo.priority == 'low'" [class.badge-warning]="todo.priority == 'medium'"
+                    [class.badge-danger]="todo.priority == 'high'">{{todo.priority}}</span>
             </div>
 
             <div class="todo-btn-group col-sm-6 col-12 d-flex justify-content-sm-end app-todo-header-btn">

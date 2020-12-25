@@ -1,11 +1,31 @@
 <div class="container app-todos">
-    <!-- <app-new-todo></app-new-todo> -->
-    <button type="button" class="btn btn-primary" (click)="createNewTodo()">Create new Todo</button>
+    <button type="button" class="btn btn-primary create-todo-btn" (click)="createNewTodo()">Create new Todo</button>
 
     <form>
-        <div class="form-group">
+        <div class="form-group form-input">
             <input class="form-control" name="search" type="text" placeholder="Search..." [(ngModel)]="search"
                 autocomplete="off">
+        </div>
+        <div class="row form-filter d-flex justify-content-end">
+            <div class="badge-item">
+                <input type="radio" id="low" name="priority" value="low" [(ngModel)]="priority">
+                <label class="badge badge-pill badge-success" for="low">low</label>
+            </div>
+
+            <div class="badge-item">
+                <input type="radio" id="medium" name="priority" value="medium" [(ngModel)]="priority">
+                <label class="badge badge-pill badge-warning" for="medium">medium</label>
+            </div>
+
+            <div class="badge-item">
+                <input type="radio" id="high" name="priority" value="high" [(ngModel)]="priority">
+                <label class="badge badge-pill badge-danger" for="high">high</label>
+            </div>
+
+            <div class="badge-item">
+                <input type="radio" id="all" name="priority" [(ngModel)]="priority">
+                <label class="badge badge-pill badge-dark" for="all">all</label>
+            </div>
         </div>
     </form>
 
@@ -13,7 +33,8 @@
         <p>Todo list is empty. Please create your first todo.</p>
     </div>
     <ul class="list-group list-group-flush todos-list" *ngIf="todoList">
-        <app-todo-item *ngFor="let todo of todoList | filterTodo:search" [todo]="todo" (isEdit)="editTodo($event)">
+        <app-todo-item *ngFor="let todo of todoList | filterTodo:search | filterTodoByPriority: priority" [todo]="todo"
+            (isEdit)="editTodo($event)">
 
         </app-todo-item>
     </ul>

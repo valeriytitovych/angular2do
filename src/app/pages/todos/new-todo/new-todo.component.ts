@@ -15,9 +15,7 @@ export class NewTodoComponent implements OnInit {
   todo: Todo;
 
   constructor(private fb: FormBuilder,
-    private bsModalRef: BsModalRef) {
-
-  }
+    private bsModalRef: BsModalRef) { }
 
   ngOnInit(): void {
     this.createNewTodoForm();

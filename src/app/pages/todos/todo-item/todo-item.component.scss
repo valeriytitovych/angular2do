@@ -1,3 +1,10 @@
+.app-todo-header-list-item {
+
+  @media (max-width: 575.98px) {
+    margin-bottom: 10px;
+  }
+}
+
 .is-done {
     text-decoration: line-through;
 }
@@ -21,6 +28,14 @@
 
 .todos-item {
   padding: 20px 0;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.badge-item {
+  width: 60px;
+  height: 32px;
+  margin-left: 5px;
 }
 
 @media (max-width: 575.98px) {
