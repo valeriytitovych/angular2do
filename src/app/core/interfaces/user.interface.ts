@@ -3,5 +3,7 @@ export interface User {
     name: string,
     email: string,
     description: string,
-    photo: string
+    photo: string,
+    fulldescription: string,
+    quote: string
 }

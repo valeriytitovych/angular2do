@@ -1,0 +1,26 @@
+.user-name {
+    margin: 20px 0;
+}
+
+.user-photo {
+    width: 300px;
+    height: 400px;
+    margin-bottom: 15px;
+
+    @media (max-width: 359.98px) {
+        width: 250px;
+        height: 350px;
+    }
+}
+
+.title {
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    margin-bottom: 25px;
+}
+
+.title:last-child {
+    margin-bottom: 40px;
+}

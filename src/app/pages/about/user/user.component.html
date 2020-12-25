@@ -1,1 +1,11 @@
-<p>{{userData | json}}</p>
+<div class="container">
+    <h1 class="user-name bg-primary text-white">{{userData.name}}</h1>
+    <img src="{{userData.photo}}" alt="{{userData.name}}" class="user-photo">
+    <h3 class="title">I am {{userData.description}}</h3>
+    <h5 class="subtitle">Write me: {{userData.email}}</h5>
+    <h3 class="title">About myself:</h3>
+    <h5 class="subtitle">{{userData.fulldescription}}</h5>
+    <h3 class="title font-italic">My motto: {{userData.quote}}</h3>
+</div>
+
+<!-- <p>{{userData | json}}</p> -->

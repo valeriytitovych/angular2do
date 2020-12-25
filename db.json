@@ -55,43 +55,55 @@
       "id": 1,
       "name": "Arnold Reid",
       "email": "arnold.reid@example.com",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptas deserunt quae ratione corporis quas ducimus perferendis aliquid, nobis aspernatur libero totam a explicabo dolor quod.",
-      "photo": "https://randomuser.me/api/portraits/men/30.jpg"
+      "description": "Middle front-end developer. Angular shogun and lead developer of this project.",
+      "photo": "https://randomuser.me/api/portraits/men/30.jpg",
+      "fulldescription": "Passionate front-end developer with 5 year experience building and maintaining responsive websites in the recruiting industry. Proficent in HTML, CSS, JavaScript; plus modern libraries and frameworks.",
+      "quote": "Veni, vidi vici!"
     },
     {
       "id": 2,
       "name": "Elmer Gibson",
       "email": "elmer.gibson@example.com",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptas deserunt quae ratione corporis quas ducimus perferendis aliquid, nobis aspernatur libero totam a explicabo dolor quod.",
-      "photo": "https://randomuser.me/api/portraits/men/2.jpg"
+      "description": "Junior front-end developer. Freelance front-end- developer.",
+      "photo": "https://randomuser.me/api/portraits/men/2.jpg",
+      "fulldescription": "An inquiring frontend developer with an analytical mind. I'm ready to deliver a result using JavaScript, AJAX, Angular, Typescript, Sass / Scss, HTML, CSS and many related frontend technologies.",
+      "quote": "Per aspera ad astra!"
     },
     {
       "id": 3,
       "name": "Marion Patterson",
       "email": "marion.patterson@example.com",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptas deserunt quae ratione corporis quas ducimus perferendis aliquid, nobis aspernatur libero totam a explicabo dolor quod.",
-      "photo": "https://randomuser.me/api/portraits/women/68.jpg"
+      "description": "Junior front-end developer. Helped in json-server questions.",
+      "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+      "fulldescription": "Enthusiastic front-end developer with a decent backend experience eager to contribute to team success through hard work, attention to detail, and excellent organizational skills. Motivated to learn, grow, and excel in web development.",
+      "quote": "Vivere militare est!"
     },
     {
       "id": 4,
       "name": "Arlene Bradley",
       "email": "arlene.bradley@example.com",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptas deserunt quae ratione corporis quas ducimus perferendis aliquid, nobis aspernatur libero totam a explicabo dolor quod.",
-      "photo": "https://randomuser.me/api/portraits/women/12.jpg"
+      "description": "Junior front-end developer. Creative beginner.",
+      "photo": "https://randomuser.me/api/portraits/women/12.jpg",
+      "fulldescription": "Creative beginner front-end developer. Skilled in designing, developing and testing web-based applications incorporating a range of technologies. Aspiring to combine broad background with strong technical skills to excel as a front-end developer.",
+      "quote": "Errare humanum est!"
     },
     {
       "id": 5,
       "name": "Charlotte Rose",
       "email": "charlotte.rose@example.com",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptas deserunt quae ratione corporis quas ducimus perferendis aliquid, nobis aspernatur libero totam a explicabo dolor quod.",
-      "photo": "https://randomuser.me/api/portraits/women/82.jpg"
+      "description": "Junior UI designer. UI consultant of the project.",
+      "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+      "fulldescription": "Results-driven and detail-oriented User Interface Designer with expertise in developing 3D characters, environments, VFX, and textures. Marcos is currently looking for an UI Designer job with a forward-moving company.",
+      "quote": "Ars longa, vita brevis!"
     },
     {
       "id": 6,
       "name": "Brian Henderson",
       "email": "brian.henderson@example.com",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptas deserunt quae ratione corporis quas ducimus perferendis aliquid, nobis aspernatur libero totam a explicabo dolor quod.",
-      "photo": "https://randomuser.me/api/portraits/men/80.jpg"
+      "description": "UX design intern. UX consultant of the project.",
+      "photo": "https://randomuser.me/api/portraits/men/80.jpg",
+      "fulldescription": "Beginner designer freelancer with vast experience is looking for collaboration with stable IT Company or Advertising Agency",
+      "quote": "De die in diem!"
     }
   ]
 }
