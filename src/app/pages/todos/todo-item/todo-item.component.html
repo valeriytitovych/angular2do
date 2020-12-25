@@ -24,7 +24,18 @@
                     Edit
                 </button>
 
-                <button class="btn btn-danger" type="button" (click)="delTodo(todo.id)">{{'del' | uppercase}}</button>
+                <button type="button" class="btn btn-danger" (click)="openModal(confirmModal)">{{'delete' |
+                    uppercase}}</button>
+                <ng-template #confirmModal>
+                    <div class="modal-body text-center">
+                        <p>Do you really wish to delete <span
+                                class="text-danger font-weight-bold">{{todo.title}}</span>?</p>
+                        <div class="todo-btn-group">
+                            <button type="button" class="btn btn-primary" (click)="delTodo(todo.id)">Yes</button>
+                            <button type="button" class="btn btn-danger" (click)="decline()">No</button>
+                        </div>
+                    </div>
+                </ng-template>
             </div>
         </div>
     </header>
